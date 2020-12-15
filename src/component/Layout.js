@@ -1,21 +1,22 @@
-import NavBar from "./Navbar";
-import Head from 'next/head'
+import NavBar from './Navbar';
+import Head from 'next/head';
+import styles from './Layout.module.scss';
 
-const layout=({children})=>{
-    return(
-        <>
-        <Head>
-            
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
-        <link rel="stylesheet" href="/style.css"/>
-        </Head>
-        <NavBar />
-         {children}
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        </>
-    )
-}
+const layout = ({ children }) => {
+  return (
+    <>
+      <Head>
+        <title>Wayfair Learning Academy</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
+      <NavBar />
+      <div className={styles.wrapper}>{children}</div>
+    </>
+  );
+};
 
-
-export default layout
+export default layout;
