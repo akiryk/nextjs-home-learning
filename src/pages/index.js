@@ -3,27 +3,16 @@ import Link from 'next/link';
 
 const Home = () => (
   <div>
-    Home Page Stub
-    <ul>
-      <li>
-        <Link href="create">
-          <a>Create</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="details/1">
-          <a>Details 1</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="details/2">
-          <a>Details 2</a>
-        </Link>
-      </li>
-      <li>
-        <a href={process.env.HOME_URL}>Wayfair</a>
-      </li>
-    </ul>
+    <h3 className="text-center"> Latest Videos on WayLearning </h3>
+    <hr/>
+
+    <div className="col-sm-12">
+      <div className="col-sm-4">
+        <div className="embed-responsive embed-responsive-4by3">
+        </div>
+
+      </div>
+    </div>
   </div>
 );
 
