@@ -9,7 +9,8 @@ const Detail = () => {
 
   return (
     <>
-      <h1>Detail {id} </h1>
+      <h1>Updated Detail Page</h1>
+      <h3>{id}</h3>
       <Link href="/">
         <a className={styles.link}>Home</a>
       </Link>
