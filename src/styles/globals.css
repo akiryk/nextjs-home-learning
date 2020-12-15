@@ -8,7 +8,7 @@ body {
 
 a {
   color: inherit;
-  text-decoration: underline;
+  text-decoration: none;
   cursor: pointer;
 }
 
@@ -20,3 +20,6 @@ a:hover {
   box-sizing: border-box;
 }
 
+.nav-wrapper {
+  background-color: #7e4c9c;
+}

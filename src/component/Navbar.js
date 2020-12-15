@@ -5,7 +5,7 @@ import React from 'react';
 const NavBar = () => {
   return (
     <nav>
-      <div className="nav-wrapper #1565c0 purple darken-3">
+      <div className="nav-wrapper #1565c0 darken-3">
         <Link href="/"><a className="brand-logo left">
           <Image
             src="/logo.png"
