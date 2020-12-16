@@ -19,12 +19,15 @@ const Detail = () => {
           <span className={styles.courseDuration}>{data.duration}</span>
         </h1>
         <p className={styles.desc}>{data.description}</p>
-        <div className={styles.priceBlock}>
-          <h3 className={styles.price}>{data.price}</h3>
-          {!data.purchased && (
+
+        {data.purchased ? (
+          <h3>Start your course!</h3>
+        ) : (
+          <div className={styles.priceBlock}>
+            <h3 className={styles.price}>{data.price}</h3>
             <button className="button">Purchase This Course</button>
-          )}
-        </div>
+          </div>
+        )}
         <div className={styles.videoWrapper}>
           <img src={`/${data.image}`} className={styles.videoThumbnail} />
           <img src="/play-icon.svg" className={styles.playIcon} />

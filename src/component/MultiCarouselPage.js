@@ -9,9 +9,8 @@ export default (props) => {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
   const chevronWidth = 40;
   const dataKey = props.keyName;
-  console.log('sainish', allData[dataKey]);
   return (
-    <div style={{ padding: `0 ${chevronWidth}px` }}>
+    <div>
       <ItemsCarousel
         requestToChangeActive={setActiveItemIndex}
         activeItemIndex={activeItemIndex}
@@ -22,14 +21,22 @@ export default (props) => {
         outsideChevron
         chevronWidth={chevronWidth}
       >
-        {allData[dataKey].map((e, i) => (
-          <div style={{ height: 400, background: '#EEE' }} key={i}>
-            <Card style={{ height: '100%' }}>
-              <Card.Img style={{ height: '70%' }} variant="top" src={e.image} />
-              <Card.Body>
-                <Card.Title>{e.title}</Card.Title>
-              </Card.Body>
-            </Card>
+        {allData[dataKey].map((data, i) => (
+          <div style={{ height: 300, background: '#EEE' }} key={i}>
+            <Link href={`details/${data.id}`}>
+              <a className={styles.cardLink}>
+                <Card style={{ height: '100%' }}>
+                  <Card.Img
+                    style={{ height: '70%' }}
+                    variant="top"
+                    src={data.image}
+                  />
+                  <Card.Body>
+                    <Card.Title>{data.title}</Card.Title>
+                  </Card.Body>
+                </Card>
+              </a>
+            </Link>
           </div>
         ))}
       </ItemsCarousel>

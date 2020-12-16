@@ -16,6 +16,7 @@
 
 .videoWrapper {
   position: relative;
+  background: black;
 
   &::before {
     content: '';
@@ -65,7 +66,8 @@
   font-size: 32px;
   left: 50%;
   font-weight: 700;
-  background: rgba(0, 0, 0, 0.8);
+  // background: rgba(0, 0, 0, 0.8);
+  background-color: #7f187f;
   padding: 12px 20px;
   width: 100%;
   margin-bottom: 40px;
