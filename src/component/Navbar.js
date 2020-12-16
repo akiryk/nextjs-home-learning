@@ -9,7 +9,10 @@ const NavBar = () => {
       <div className={styles.innerWrapper}>
         <Link href="/">
           <h1 className={styles.brandTitle}>
-            <a className={styles.brandLink}>WayLearn</a>
+            <a>
+              <img src="/wf-logo.svg" className={styles.brandLogo} />
+              <span className={styles.brandLink}>WayLearn</span>
+            </a>
           </h1>
         </Link>
 
