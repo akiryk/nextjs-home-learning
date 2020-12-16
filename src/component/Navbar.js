@@ -9,23 +9,30 @@ const NavBar = () => {
       <div className={styles.innerWrapper}>
         <Link href="/">
           <h1 className={styles.brandTitle}>
-            <a className={styles.brandLink}>Home Learning</a>
+            <a>
+              <img src="/wf-logo.svg" className={styles.brandLogo} />
+              <span className={styles.brandLink}>WayLearn</span>
+            </a>
           </h1>
         </Link>
+
         <ul id="nav-mobile" className={styles.nav}>
           <li className={styles.navItem}>
             <Link href="/">
-              <a>Learn</a>
+              <a className={styles.menuItem}>Learn</a>
             </Link>
           </li>
           <li className={styles.navItem}>
             <Link href="/create-overview">
-              <a>Create</a>
+              <a className={styles.menuItem}>Create</a>
             </Link>
           </li>
+        </ul>
+
+        <ul id="nav-mobile" className={styles.navAccount}>
           <li className={styles.navItem}>
-            <Link href="/">
-              <a>My Account</a>
+            <Link href="/account">
+              <a className={styles.menuItem}>My Account</a>
             </Link>
           </li>
         </ul>

@@ -1,7 +1,13 @@
 .siteHeader {
-  background-color: #733b92;
+  background-color: #7f187f;
   margin-bottom: 60px;
   color: #fff;
+}
+
+.brandLogo {
+  width: 50px;
+  margin-right: 14px;
+  margin-top: -8px;
 }
 
 .innerWrapper {
@@ -9,7 +15,8 @@
   margin: auto;
   padding: 0 40px;
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
+  align-items: baseline;
 }
 
 .brandTitle {
@@ -18,12 +25,34 @@
   margin: 21px 0;
 }
 
+.navWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .nav {
   display: flex;
   list-style: none;
-  align-items: center;
 }
 
 .navItem {
   margin-left: 32px;
+}
+
+.navAccount {
+  margin-left: auto;
+  list-style: none;
+}
+
+.menuItem {
+  color: #fff;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    color: #fff;
+    outline: none;
+  }
 }

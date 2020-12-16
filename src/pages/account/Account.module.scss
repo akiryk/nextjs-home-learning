@@ -1,0 +1,41 @@
+.wrapper {
+  width: 800px;
+  margin: auto;
+}
+
+.title {
+  font-size: 32px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.listItem {
+  display: flex;
+  margin: 32px 0;
+}
+
+.linkImage {
+  border: 1px solid transparent;
+  transition: all 0.2s;
+
+  &:hover {
+    filter: brightness(0.8);
+  }
+}
+
+.linkText {
+  font-size: 16px;
+  font-weight: 700;
+  color: black;
+}
+
+.text {
+  margin: 0 0 4px;
+}
+
+.textBlock {
+  margin-left: 20px;
+}

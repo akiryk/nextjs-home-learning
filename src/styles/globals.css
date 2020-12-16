@@ -21,13 +21,13 @@ a:hover {
 }
 
 .nav-wrapper {
-  background-color: #7e4c9c;
+  background-color: #7f187f;
 }
 
 .button {
   cursor: pointer;
   padding: 12px;
-  background-color: #733b92;
+  background-color: #7f187f;
   color: #fff;
   font-size: 16px;
   border-radius: 8px;
