@@ -9,7 +9,8 @@
   margin: auto;
   padding: 0 40px;
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
+  align-items: baseline;
 }
 
 .brandTitle {
@@ -18,12 +19,22 @@
   margin: 21px 0;
 }
 
+.navWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .nav {
   display: flex;
   list-style: none;
-  align-items: center;
 }
 
 .navItem {
   margin-left: 32px;
+}
+
+.navAccount {
+  margin-left: auto;
+  list-style: none;
 }

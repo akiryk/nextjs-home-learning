@@ -12,6 +12,7 @@ const NavBar = () => {
             <a className={styles.brandLink}>Home Learning</a>
           </h1>
         </Link>
+
         <ul id="nav-mobile" className={styles.nav}>
           <li className={styles.navItem}>
             <Link href="/">
@@ -23,8 +24,11 @@ const NavBar = () => {
               <a>Create</a>
             </Link>
           </li>
+        </ul>
+
+        <ul id="nav-mobile" className={styles.navAccount}>
           <li className={styles.navItem}>
-            <Link href="/">
+            <Link href="/account">
               <a>My Account</a>
             </Link>
           </li>
