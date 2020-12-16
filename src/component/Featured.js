@@ -8,14 +8,6 @@ const Featured = () => (
   <div>
     <div>
       <div className='container-fluid'>
-        <div className="row title" style={{ marginBottom: '20px' }}>
-
-          <div className="col-sm-12 btn btn-warning">
-            Featured
-          </div>
-        </div>
-      </div>
-      <div className='container-fluid'>
         <Carousel>
           <Carousel.Item style={{ 'height': '300px' }}>
             <img style={{ 'height': '300px' }}
