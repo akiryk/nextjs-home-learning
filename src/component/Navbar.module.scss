@@ -38,3 +38,15 @@
   margin-left: auto;
   list-style: none;
 }
+
+.menuItem {
+  color: #fff;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    color: #fff;
+    outline: none;
+  }
+}

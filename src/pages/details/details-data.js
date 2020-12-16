@@ -1,7 +1,8 @@
 export const detailsData = {
   1: {
-    purchased: true,
+    purchased: false,
     title: "The Chef's Kitchen",
+    image: 'kitchen.jpg',
     description: `Learn how to create a kitchen for cooking, baking, and entertaining.
     From knife handling skills to stocking a delicious spice cabinet, you'll get everything you need.
     You'll find this to be an entertaining and easy-to-understand course with plenty of mouth-watering
@@ -43,6 +44,7 @@ export const detailsData = {
   2: {
     purchased: false,
     title: 'How To Bake',
+    image: 'kitchen.jpg',
     description:
       "In this inviting 25-minute class, beloved chef and recipe developer Julia Turshen shares how to make a no-fail yeast dough every time — a perfect base for sweet rolls, savory twisted breads, iced buns, and more. You'll learn:",
     creator:

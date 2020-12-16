@@ -16,12 +16,12 @@ const NavBar = () => {
         <ul id="nav-mobile" className={styles.nav}>
           <li className={styles.navItem}>
             <Link href="/">
-              <a>Learn</a>
+              <a className={styles.menuItem}>Learn</a>
             </Link>
           </li>
           <li className={styles.navItem}>
             <Link href="/create-overview">
-              <a>Create</a>
+              <a className={styles.menuItem}>Create</a>
             </Link>
           </li>
         </ul>
@@ -29,7 +29,7 @@ const NavBar = () => {
         <ul id="nav-mobile" className={styles.navAccount}>
           <li className={styles.navItem}>
             <Link href="/account">
-              <a>My Account</a>
+              <a className={styles.menuItem}>My Account</a>
             </Link>
           </li>
         </ul>
