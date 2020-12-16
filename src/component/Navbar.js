@@ -15,12 +15,17 @@ const NavBar = () => {
         <ul id="nav-mobile" className={styles.nav}>
           <li className={styles.navItem}>
             <Link href="/">
-              <a>Courses</a>
+              <a>Learn</a>
             </Link>
           </li>
           <li className={styles.navItem}>
-            <Link href="/create">
+            <Link href="/create-overview">
               <a>Create</a>
+            </Link>
+          </li>
+          <li className={styles.navItem}>
+            <Link href="/">
+              <a>My Account</a>
             </Link>
           </li>
         </ul>

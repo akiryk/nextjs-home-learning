@@ -45,7 +45,8 @@
 }
 
 .label {
-  display: block;
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 5px;
 }
 
@@ -67,16 +68,15 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 40px;
 }
 
-.uploadText {
-}
+.helpLink {
+  color: rgb(131, 96, 131);
+  font-size: 14px;
+  cursor: pointer;
 
-.button {
-  padding: 12px;
-  background-color: #733b92;
-  color: #fff;
-  font-size: 16px;
-  border-radius: 8px;
-  border: none;
+  &:hover {
+    color: rgb(26, 13, 26);
+  }
 }

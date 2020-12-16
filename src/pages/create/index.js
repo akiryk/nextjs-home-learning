@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from 'react';
+import React, { useEffect, useReducer, useState } from 'react';
 import { useRouter } from 'next/router';
 import SavingMessage from '../../component/SavingMessage';
 import styles from './Create.module.scss';
@@ -28,10 +28,17 @@ const reducer = (state, action) => {
       };
     }
     case 'price': {
-      return {
-        ...state,
-        price: payload,
-      };
+      if (payload.substr(0, 1) !== '$') {
+        return {
+          ...state,
+          price: `$${payload}`,
+        };
+      } else {
+        return {
+          ...state,
+          price: payload,
+        };
+      }
     }
     default:
       return state;
@@ -43,6 +50,10 @@ const Create = () => {
   const [formState, dispatch] = useReducer(reducer, initialState);
   const [status, setStatus] = useState(DEFAULT);
 
+  useEffect(() => {
+    localStorage.setItem('lessons', null);
+  }, []);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setStatus(SAVING);
@@ -53,7 +64,7 @@ const Create = () => {
       router.push({
         pathname: 'create/1',
       });
-    }, 800);
+    }, 400);
   };
 
   const handleChange = (e) => {
@@ -73,7 +84,10 @@ const Create = () => {
         >
           <div className={styles.inputWrapper}>
             <label className={styles.label} htmlFor="a">
-              Course Title
+              Course Title{' '}
+              <span className={styles.helpLink}>
+                See what makes a good title
+              </span>
             </label>
             <input
               type="text"
@@ -87,6 +101,9 @@ const Create = () => {
           <div className={styles.inputWrapper}>
             <label className={styles.label} htmlFor="b">
               Course Description
+              <span className={styles.helpLink}>
+                Get help with the description
+              </span>
             </label>
             <textarea
               className={styles.textarea}
@@ -100,6 +117,9 @@ const Create = () => {
           <div className={styles.inputWrapper}>
             <label className={styles.label} htmlFor="c">
               Price
+              <span className={styles.helpLink}>
+                Get help settling on a price
+              </span>
             </label>
             <input
               type="text"
@@ -107,10 +127,11 @@ const Create = () => {
               id="c"
               name="price"
               onChange={handleChange}
+              value={formState.price}
             />
           </div>
 
-          <button className={styles.button}>Save Your Course</button>
+          <button className="button">Save Your Course</button>
         </form>
         {status === SAVING && <SavingMessage />}
       </div>
