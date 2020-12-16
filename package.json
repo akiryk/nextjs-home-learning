@@ -8,10 +8,13 @@
     "start": "next start"
   },
   "dependencies": {
+    "bootstrap": "^4.5.3",
     "js-cookie": "^2.2.1",
     "next": "10.0.3",
     "react": "17.0.1",
+    "react-bootstrap": "^1.4.0",
     "react-dom": "17.0.1",
+    "react-items-carousel": "^2.8.0",
     "sass": "^1.30.0"
   },
   "devDependencies": {
