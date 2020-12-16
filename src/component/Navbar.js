@@ -9,7 +9,7 @@ const NavBar = () => {
       <div className={styles.innerWrapper}>
         <Link href="/">
           <h1 className={styles.brandTitle}>
-            <a className={styles.brandLink}>Home Learning</a>
+            <a className={styles.brandLink}>WayLearn</a>
           </h1>
         </Link>
         <ul id="nav-mobile" className={styles.nav}>
