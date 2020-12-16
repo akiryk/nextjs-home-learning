@@ -6,14 +6,38 @@
   width: 100%;
 }
 
+.lessonTitle,
+.subtitle {
+  margin: 16px 0;
+}
+
 .title {
   font-size: 40px;
+  font-weight: 500;
+}
+
+.lessonTitle {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 24px;
   font-weight: 500;
 }
 
 .formWrapper {
   max-width: 800px;
   margin: auto;
+  position: relative;
+}
+
+.form {
+  transition: opacity cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 1;
+}
+.formMuted {
+  opacity: 0.15;
 }
 
 .inputWrapper {
@@ -21,7 +45,8 @@
 }
 
 .label {
-  display: block;
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 5px;
 }
 
@@ -43,16 +68,15 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 40px;
 }
 
-.uploadText {
-}
+.helpLink {
+  color: rgb(131, 96, 131);
+  font-size: 14px;
+  cursor: pointer;
 
-.uploadButton {
-  padding: 12px;
-  background-color: #733b92;
-  color: #fff;
-  font-size: 16px;
-  border-radius: 8px;
-  border: none;
+  &:hover {
+    color: rgb(26, 13, 26);
+  }
 }

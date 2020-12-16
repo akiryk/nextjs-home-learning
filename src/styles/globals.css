@@ -23,3 +23,14 @@ a:hover {
 .nav-wrapper {
   background-color: #7e4c9c;
 }
+
+.button {
+  cursor: pointer;
+  padding: 12px;
+  background-color: #733b92;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  margin-right: 20px;
+}
