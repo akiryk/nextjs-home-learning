@@ -3,10 +3,13 @@ import ItemsCarousel from 'react-items-carousel';
 import Link from 'next/link';
 import styles from './MultiCarouselPage.module.scss';
 import Card from 'react-bootstrap/Card';
+import { allData } from './data/data';
 
-export default () => {
+export default (props) => {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
   const chevronWidth = 40;
+  const dataKey = props.keyName;
+  console.log('sainish', allData[dataKey]);
   return (
     <div style={{ padding: `0 ${chevronWidth}px` }}>
       <ItemsCarousel
@@ -19,128 +22,16 @@ export default () => {
         outsideChevron
         chevronWidth={chevronWidth}
       >
-        <div style={{ height: 200, background: '#EEE', cursor: 'pointer' }}>
-          <Link href="details/1">
-            <Card>
-              <Card.Img
-                variant="top"
-                src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
-              />
+        {allData[dataKey].map((e, i) => (
+          <div style={{ height: 400, background: '#EEE' }} key={i}>
+            <Card style={{ height: '100%' }}>
+              <Card.Img style={{ height: '70%' }} variant="top" src={e.image} />
               <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </Card.Text>
+                <Card.Title>{e.title}</Card.Title>
               </Card.Body>
             </Card>
-          </Link>
-        </div>
-        <div style={{ height: 200, background: '#EEE' }}>
-          <Card>
-            <Card.Img
-              variant="top"
-              src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
-            />
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </div>
-        <div style={{ height: 200, background: '#EEE' }}>
-          <Card>
-            <Card.Img
-              variant="top"
-              src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
-            />
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </div>
-        <div style={{ background: '#EEE' }}>
-          <Card>
-            <Card.Img
-              variant="top"
-              src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
-            />
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </div>
-        <div style={{ background: '#EEE' }}>
-          <Card>
-            <Card.Img
-              variant="top"
-              src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
-            />
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </div>
-        <div style={{ background: '#EEE' }}>
-          <Card>
-            <Card.Img
-              variant="top"
-              src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
-            />
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </div>
-        <div style={{ background: '#EEE' }}>
-          <Card>
-            <Card.Img
-              variant="top"
-              src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
-            />
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </div>
-        <div style={{ background: '#EEE' }}>
-          <Card>
-            <Card.Img
-              variant="top"
-              src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
-            />
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </div>
+          </div>
+        ))}
       </ItemsCarousel>
     </div>
   );
